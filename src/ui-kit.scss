@@ -1,0 +1,18 @@
+:root {
+  --media-screen-xs: "479.99px";
+  --media-screen-sm: "767.99px";
+  --media-screen-md: "1059.99px";
+  --media-hover: "screen and (min-width: #{var(--media-screen-sm)})";
+}
+
+@function rem($px) {
+  @return ($px / $root-font-size) + rem;
+}
+
+@function em($px) {
+  @return ($px / $root-font-size) + em;
+}
+
+@function percent($size-text, $line-height) {
+  @return $line-height / $size-text * 100%;
+}
