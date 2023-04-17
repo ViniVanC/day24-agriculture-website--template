@@ -2,6 +2,47 @@
 @import "./ui-kit";
 
 // ---------------------------------------------------------------------------
+// ui-kit
+
+:root {
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-yellowtail: "Yellowtail", cursive;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  --color-blue: #274c5b;
+  --color-green: #7eb693;
+  --color-yellow: #efd372;
+  --color-gray: #d4d4d4;
+  --color-white: #f9f8f8;
+  --color-lightGary: #eff6f1;
+  --color-darkGray: #525c60;
+
+  --media-screen-xs: "479.99px";
+  --media-screen-sm: "767.99px";
+  --media-screen-md: "1059.99px";
+  --media-hover: "screen and (min-width: #{var(--media-screen-sm)})";
+}
+
+$root-font-size: 18;
+
+@function rem($px) {
+  @return ($px / $root-font-size) + rem;
+}
+
+@function em($px) {
+  @return ($px / $root-font-size) + em;
+}
+
+@function percent($size-text, $line-height) {
+  @return $line-height / $size-text * 100%;
+}
+
+// ---------------------------------------------------------------------------
 // tags
 
 h1,
