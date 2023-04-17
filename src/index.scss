@@ -1,6 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Yellowtail&display=swap");
 @import "./ui-kit";
 
+// ---------------------------------------------------------------------------
+// tags
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-roboto);
+  font-weight: var(--font-extrabold);
+  font-style: normal;
+  color: #274c5b;
+
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: rem(70);
+  line-height: percent(70, 82);
+}
+
+h2 {
+  font-size: rem(50);
+  line-height: percent(50, 59);
+}
+
+h3 {
+  font-size: rem(40);
+  line-height: percent(40, 47);
+}
+
+h4 {
+  font-size: rem(35);
+  line-height: percent(35, 41);
+}
+
+h5 {
+  font-size: rem(30);
+  line-height: percent(30, 35);
+}
+
+h6 {
+  font-size: rem(25);
+  line-height: percent(25, 29);
+}
+
+// ---------------------------------------------------------------------------
+// ids
+
 #root {
   font-family: var(--font-open-sans);
 }
+
+// ---------------------------------------------------------------------------
+// classes
