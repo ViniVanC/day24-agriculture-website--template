@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Yellowtail&display=swap");
-@import "./ui-kit";
 
 // ---------------------------------------------------------------------------
 // ui-kit
@@ -22,11 +21,13 @@
   --color-lightGary: #eff6f1;
   --color-darkGray: #525c60;
 
-  --media-screen-xs: "479.99px";
-  --media-screen-sm: "767.99px";
-  --media-screen-md: "1059.99px";
-  --media-hover: "screen and (min-width: #{var(--media-screen-sm)})";
+  --transition: all 0.3s;
 }
+
+$media-screen-xs: "479.99px";
+$media-screen-sm: "767.99px";
+$media-screen-md: "1059.99px";
+$media-hover: "screen and (min-width: #{$media-screen-sm})";
 
 $root-font-size: 18;
 
@@ -144,6 +145,60 @@ q {
   text-align: center;
 }
 
+button {
+  --button-color-text: #fff;
+  --button-color-background: #274c5b;
+
+  display: flex;
+  background-color: var(--button-color-background);
+  align-items: center;
+  justify-content: center;
+  gap: rem(10);
+
+  font-family: var(--font-roboto);
+  font-weight: var(--font-bold);
+  font-size: rem(20);
+  line-height: percent(20, 23);
+  color: var(--button-color-text);
+
+  margin: 0;
+  padding: rem(29) rem(39);
+
+  border: 0;
+  border-radius: rem(16);
+
+  transition: var(--transition);
+
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: relative;
+    background-image: url("/images/circle-arrow.svg");
+    width: rem(21.5);
+    height: rem(21.5);
+    transition: var(--transition);
+  }
+
+  @media #{$media-hover} {
+    &:hover {
+      background-color: color-mix(
+        in srgb,
+        #000,
+        var(--button-color-background) 85%
+      );
+
+      &::after {
+        translate: rem(10) 0;
+      }
+    }
+  }
+
+  &:active {
+    scale: 0.9;
+  }
+}
+
 // ---------------------------------------------------------------------------
 // ids
 
@@ -153,3 +208,23 @@ q {
 
 // ---------------------------------------------------------------------------
 // classes
+
+.button {
+  &-yellow {
+    --button-color-background: var(--color-yellow);
+    --button-color-text: var(--color-blue);
+  }
+
+  &-white {
+    --button-color-background: #fff;
+    --button-color-text: var(--color-blue);
+    padding: rem(28) rem(38);
+    border: rem(1) solid var(--color-blue);
+  }
+
+  &-pagination {
+    &::after {
+      display: none;
+    }
+  }
+}
