@@ -49,6 +49,17 @@ h6 {
   line-height: percent(25, 29);
 }
 
+p {
+  font-family: var(--font-open-sans);
+  font-style: normal;
+  font-weight: var(--font-regular);
+  font-size: rem(18);
+  line-height: percent(18, 30);
+  color: var(--color-darkGray);
+  padding: 0;
+  margin: 0;
+}
+
 // ---------------------------------------------------------------------------
 // ids
 
