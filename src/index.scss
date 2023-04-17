@@ -13,7 +13,7 @@ h6 {
   font-family: var(--font-roboto);
   font-weight: var(--font-extrabold);
   font-style: normal;
-  color: #274c5b;
+  color: var(--color-blue);
 
   margin: 0;
   padding: 0;
@@ -56,8 +56,51 @@ p {
   font-size: rem(18);
   line-height: percent(18, 30);
   color: var(--color-darkGray);
+
   padding: 0;
   margin: 0;
+}
+
+ul,
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: rem(21);
+
+  margin: 0;
+  padding: 0 0 0 rem(20);
+}
+
+li {
+  font-family: var(--font-open-sans);
+  font-style: normal;
+  font-weight: var(--font-regular);
+  font-size: rem(18);
+  line-height: percent(18, 30);
+  color: var(--color-darkGray);
+
+  &::marker {
+    font-weight: var(--font-extrabold);
+    color: var(--color-blue);
+  }
+}
+
+q {
+  display: inline-block;
+  max-width: rem(936);
+  width: 100%;
+
+  padding: rem(69) rem(59.5);
+  margin: 0;
+  border-radius: rem(30);
+
+  background-color: #f1edea;
+
+  font-weight: var(--font-bold);
+  font-size: rem(20);
+  line-height: percent(20, 33);
+  color: var(--color-blue);
+  text-align: center;
 }
 
 // ---------------------------------------------------------------------------
