@@ -6,6 +6,8 @@ import { headerNavList } from "../../db";
 import { Search } from "../Search/Search";
 import { GrCart } from "react-icons/gr";
 
+import "./Header.scss";
+
 export const Header = () => {
   const [cartNum] = useState(0);
 
@@ -19,7 +21,7 @@ export const Header = () => {
             <Search />
             <div className="header__cart header-cart">
               <button className="header-cart__button">
-                <GrCart />
+                <GrCart size={23} />
               </button>
               <span className="header-cart__num">Cart ({cartNum})</span>
             </div>
