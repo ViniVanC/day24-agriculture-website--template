@@ -191,6 +191,14 @@ button {
 // ---------------------------------------------------------------------------
 // classes
 
+.container {
+  max-width: rem(1430);
+  width: 100%;
+
+  padding: 0 rem(15);
+  margin: 0 auto;
+}
+
 .button {
   &-yellow {
     --button-color-background: var(--color-yellow);
