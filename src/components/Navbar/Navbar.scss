@@ -1,0 +1,62 @@
+@import "../../ui-kit";
+
+.navbar {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: rem(45);
+    list-style: none;
+  }
+
+  &__link {
+    font-family: var(--font-roboto);
+    font-weight: var(--font-bold);
+    font-size: rem(20);
+    line-height: percent(20, 23);
+    text-decoration: none;
+    color: var(--color-blue);
+    transition: var(--transition);
+
+    &:hover {
+      color: color-mix(in srgb, #fff, var(--color-blue) 85%);
+    }
+  }
+
+  &-children__list {
+    display: none;
+    position: absolute;
+    top: 130%;
+    left: 0;
+    width: max-content;
+    padding: rem(15);
+    border-radius: rem(10);
+    background-color: #fff;
+    list-style: none;
+  }
+}
+
+.item-parent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: rem(5);
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    width: 8px;
+    height: 6px;
+    background: url("/images/arrow-down.svg");
+  }
+
+  &.open {
+    .navbar-children__list {
+      display: flex;
+    }
+
+    &::after {
+      scale: -1;
+    }
+  }
+}
