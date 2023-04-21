@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GrSearch } from "react-icons/gr";
+import "./Search.scss";
 
 export const Search = () => {
   const [searchValue, setSearchValue] = useState("");
@@ -23,7 +24,7 @@ export const Search = () => {
         onChange={handleChangeSearchValue}
       />
       <button className="search-form__button" type="submit">
-        <GrSearch />
+        <GrSearch size={21} />
       </button>
     </form>
   );
